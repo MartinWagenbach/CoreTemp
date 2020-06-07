@@ -30,7 +30,7 @@ def readConfig():
 
     if system_cfg_path.is_file():
         cp.read(system_cfg_path)
-    if local_cfg_path.readFilePath().is_file():
+    if not local_cfg_path.readFilePath() is None:
         cp.read(local_cfg_path.readFilePath())
 
     return cp
