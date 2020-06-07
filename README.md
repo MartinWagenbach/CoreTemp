@@ -16,7 +16,7 @@ $ pip3 install -r requirements.txt
 
 - Edit the CoreTemp.ini.
 
-- Move the CoreTemp.ini to your Path.
+- Move the CoreTemp.ini to your config path.
 
 ```shell
 $ cp CoreTemp.ini /etc/
