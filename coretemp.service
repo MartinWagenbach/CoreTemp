@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor CPU temperatur with CoreTemp.py
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Environment=HOME=/root/
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/local/share/CoreTemp/CoreTemp.py
+
+[Install]
+WantedBy=multi-user.target
