@@ -6,17 +6,17 @@ Monitor the Raspberry Pi cpu temperature and send an e-mail or shutdown in case 
 
 ## Installation
 
-- Clone this repo to your Raspberry Pi using `https://github.com/MartinWagenbach/CoreTemp.git`
+- Clone this repo to your Raspberry Pi using `https://github.com/MartinWagenbach/CoreTemp.git`.
 
-- go to your directory where you cloned the repo and install the requirements
+- Go to your directory where you cloned the repo and install the requirements.
 
 ```shell
 $ pip3 install -r requirements.txt
 ```
 
-- edit the CoreTemp.ini
+- Edit the CoreTemp.ini.
 
-- move the CoreTemp.ini to your Path
+- Move the CoreTemp.ini to your Path.
 
 ```shell
 $ cp CoreTemp.ini /etc/
