@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import sys
 from configparser import ConfigParser
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
