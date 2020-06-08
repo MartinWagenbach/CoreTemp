@@ -22,6 +22,38 @@ $ pip3 install -r requirements.txt
 $ cp CoreTemp.ini /etc/
 ```
 
+## Setup as service (Optional)
+
+- Let’s create a file called: `/etc/systemd/system/coretemp.service`
+
+```service
+[Unit]
+Description=Monitor CPU temperatur with CoreTemp.py
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Environment=HOME=/root/
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/local/share/CoreTemp/CoreTemp.py
+
+[Install]
+WantedBy=multi-user.target
+```
+
+- That’s it. We can now start the service:
+
+```shell
+$ systemctl start coretemp
+```
+
+- And automatically get it to start on boot:
+
+```shell
+$ systemctl enable coretemp
+```
+
 ---
 
 ## Contributors
